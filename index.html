@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Physics Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Physics Schedule</h1>
+        <div id="current-time"></div>
+    </header>
+
+    <main>
+        <div class="table-container">
+            <table id="timetable">
+                <thead>
+                    <tr>
+                        <th></th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th>
+                    </tr>
+                </thead>
+                <tbody id="timetable-body">
+                    </tbody>
+            </table>
+        </div>
+
+        <section class="assignment-section">
+            <h3>課題・メモ (画像対応)</h3>
+            <div class="input-group">
+                <textarea id="quick-memo" placeholder="課題や締切をメモ..."></textarea>
+                <div class="image-upload-wrapper">
+                    <input type="file" id="image-input" accept="image/*" hidden>
+                    <button type="button" onclick="document.getElementById('image-input').click()" class="btn-secondary">画像を添付</button>
+                    <div id="image-preview"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="link-section">
+            <button onclick="location.href='https://moodle.toho-u.ac.jp/my/'" class="btn-moodle">Moodle全体を開く</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
